@@ -13,7 +13,15 @@ export const GithubUsersScreen = () => {
         <Text style={styles.searchInputText}>Search for a GitHub User</Text>
         <Text style={styles.listText}> GitHub User List 👇</Text>
       </View>
+      {/**
+       * Component in charge of rendering existing repos
+       */}
       <UserListComponent value={gitHubUserList} />
+       {/**
+       * Component in charge of obtaining the name of the 
+       * repository to search for or repositories that match 
+       * the value entered.
+       */}
       <SearchbarComponent value={search} onChange={handleOnChangeText} />
     </SafeAreaView>
   );

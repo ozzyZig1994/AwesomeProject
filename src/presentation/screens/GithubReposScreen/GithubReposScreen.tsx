@@ -25,7 +25,15 @@ export const GithubReposScreen = ({navigation, route}: Props) => {
           <Text style={styles.listText}> GitHub User's Repo List 👇</Text>
         </View>
       </View>
+      {/**
+       * Component in charge of rendering existing repos
+       */}
       <RepoListComponent value={gitHubUserReposList} />
+      {/**
+       * Component in charge of obtaining the name of the 
+       * repository to search for or repositories that match 
+       * the value entered.
+       */}
       <SearchbarComponent value={search} onChange={handleOnChangeText} />
     </SafeAreaView>
   );

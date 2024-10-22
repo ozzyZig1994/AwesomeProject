@@ -6,6 +6,11 @@ export const useGetGithubUsers = () => {
   const [ gitHubUserList, setGitHubUserList ] = useState([] as GithubUsers[]);
   const [ search, setSearch ] = useState('');
 
+  /**
+   * Method that performs the search and filters the results depending on 
+   * the value entered.
+   * @param data 
+   */
   const debouncing = (data: GithubUsers[]) => {
     setGitHubUserList(search 
       ? data.filter(value => value.login === search || value.login.startsWith(search)) 
